@@ -44,6 +44,41 @@ them there to match your wiring. The defaults are:
 | Touch INT      | GP6       | active low                                            |
 | Touch RESET    | GP7       | active low                                            |
 
+```text
+                         ┌───────[ USB ]───────────┐
+                         │      RASPBERRY PI       │
+                         │          PICO           │
+                         │                         │
+  1  GP0  ───────────────┤ ○                     ○ ├────────────── 40  VBUS
+  2  GP1  ───────────────┤ ○                     ○ ├────────────── 39  VSYS
+  3  GND  ───────────────┤ ○                     ○ ├────────────── 38  GND
+  4  GP2  ───────────────┤ ○                     ○ ├────────────── 37  3V3_EN
+  5  GP3  ───────────────┤ ○                     ○ ├────────────── 36  3V3
+  6  GP4  ── TOUCH SDA ──┤ ○                     ○ ├────────────── 35  ADC_VREF
+  7  GP5  ── TOUCH SCL ──┤ ○                     ○ ├────────────── 34  GP28
+  8  GND  ───────────────┤ ○                     ○ ├────────────── 33  GND
+  9  GP6  ── TOUCH INT ──┤ ○                     ○ ├────────────── 32  GP27
+ 10  GP7  ─ TOUCH RESET ─┤ ○                     ○ ├────────────── 31  GP26
+ 11  GP8  ───────────────┤ ○                     ○ ├────────────── 30  RUN
+ 12  GP9  ───────────────┤ ○                     ○ ├── EPD BUSY ─ 29  GP22
+ 13  GND  ───────────────┤ ○                     ○ ├────────────── 28  GND
+ 14  GP10 ───────────────┤ ○                     ○ ├──── EPD RESET ── 27  GP21
+ 15  GP11 ───────────────┤ ○                     ○ ├── EPD D/C ─── 26  GP20
+ 16  GP12 ───────────────┤ ○                     ○ ├── EPD MOSI ──── 25  GP19
+ 17  GP13 ───────────────┤ ○                     ○ ├── EPD SCK ───── 24  GP18
+ 18  GND  ───────────────┤ ○                     ○ ├────────────── 23  GND
+ 19  GP14 ───────────────┤ ○                     ○ ├── EPD CS ───── 22  GP17
+ 20  GP15 ───────────────┤ ○                     ○ ├── EPD MISO ────── 21  GP16
+                         │                         │
+                         │       ┌─────────┐       │
+                         │       │  RP2040 │       │
+                         │       └─────────┘       │
+                         │                         │
+                         └─────────────────────────┘
+```
+
+![Pico pinout](docs/pico-pinout.svg)
+
 The on-board LED (`PICO_DEFAULT_LED_PIN`) is used as a diagnostic; see below.
 
 `DISPLAY_ROTATION` in the same file sets the screen orientation for both
