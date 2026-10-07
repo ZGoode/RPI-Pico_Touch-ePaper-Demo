@@ -215,7 +215,7 @@
 <rect x="554" y="427.0" width="76" height="22" rx="3" fill="#d6409f"/>
 <text x="592.0" y="442.5" fill="#fff" font-size="12.5" font-weight="bold" text-anchor="middle">GP22</text>
 <rect x="636" y="427.0" width="164" height="22" rx="3" fill="#d6409f"/>
-<text x="718.0" y="442.5" fill="#fff" font-size="12.5" font-weight="bold" text-anchor="middle">EPD CONTROL</text>
+<text x="718.0" y="442.5" fill="#fff" font-size="12.5" font-weight="bold" text-anchor="middle">EPD BUSY</text>
 <circle cx="499" cy="466" r="5" fill="#c9b458"/>
 <line x1="504" y1="466" x2="514" y2="466" stroke="#8b949e" stroke-width="2"/>
 <rect x="516" y="455.0" width="34" height="22" rx="3" fill="#2b3038"/>
